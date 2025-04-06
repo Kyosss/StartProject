@@ -7,7 +7,10 @@ public class Kiwi : MonoBehaviour
 
     private SpriteRenderer sr;
     private CircleCollider2D cicle;
-    public GameObject collected;    
+    public GameObject collected;
+    public int score;
+
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -25,6 +28,8 @@ public class Kiwi : MonoBehaviour
             sr.enabled = false;
             cicle.enabled = false;
             collected.SetActive(true);
+
+            GameController.instance.totalScore += score;
 
             Destroy(gameObject, 0.3f);
         }
