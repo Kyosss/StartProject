@@ -12,7 +12,7 @@ public class Slime : MonoBehaviour
     public Transform leftCol;
     public Transform headPoint;
     private bool colliding;
-    public LayerMask Layer;
+    public LayerMask layer;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -27,7 +27,7 @@ public class Slime : MonoBehaviour
     {
         rig.linearVelocity = new Vector2(speed, rig.linearVelocity.y);
 
-        colliding = Physics2D.Linecast(rightCol.position, leftCol.position);
+        colliding = Physics2D.Linecast(rightCol.position, leftCol.position, layer);
 
         if (colliding)
         {
@@ -46,7 +46,7 @@ public class Slime : MonoBehaviour
             if (height > 0f)
             {
                 col.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 5);
-                
+
                 
             }
             
