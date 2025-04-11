@@ -15,6 +15,10 @@ public class Slime : MonoBehaviour
     private bool colliding;
     public LayerMask layer;
 
+    public BoxCollider2D boxCollider2D;
+    public CircleCollider2D circleCollider2D;
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -46,7 +50,14 @@ public class Slime : MonoBehaviour
 
             if (height > 0f)
             {
-                col.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 5);
+                col.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 10, ForceMode2D.Impulse);
+                speed = 0;
+                anim.SetTrigger("die");
+                //boxCollider2D.enabled = false;
+                circleCollider2D.enabled = false;
+                rig.bodyType = RigidbodyType2D.Kinematic;
+
+                Destroy(gameObject, 0.05f);
 
                 
             }

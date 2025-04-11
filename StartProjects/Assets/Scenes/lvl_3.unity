@@ -4407,6 +4407,11 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
+--- !u!58 &1737476280 stripped
+CircleCollider2D:
+  m_CorrespondingSourceObject: {fileID: 9211447593473562595, guid: 51182fe030ce4a747b8ae0f29c1b2432, type: 3}
+  m_PrefabInstance: {fileID: 3961494668165872558}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1758365536
 GameObject:
   m_ObjectHideFlags: 0
@@ -8971,6 +8976,14 @@ PrefabInstance:
     - target: {fileID: 846124393296449124, guid: 51182fe030ce4a747b8ae0f29c1b2432, type: 3}
       propertyPath: m_Name
       value: Slime
+      objectReference: {fileID: 0}
+    - target: {fileID: 7172329455037666985, guid: 51182fe030ce4a747b8ae0f29c1b2432, type: 3}
+      propertyPath: circleCollider2D
+      value: 
+      objectReference: {fileID: 1737476280}
+    - target: {fileID: 8377614112754140420, guid: 51182fe030ce4a747b8ae0f29c1b2432, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.075
       objectReference: {fileID: 0}
     - target: {fileID: 8959210024396778019, guid: 51182fe030ce4a747b8ae0f29c1b2432, type: 3}
       propertyPath: m_LocalPosition.x
