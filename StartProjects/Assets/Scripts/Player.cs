@@ -84,6 +84,12 @@ public class Player : MonoBehaviour
             Destroy(gameObject);
         }
 
+        if (collision.gameObject.tag == "Saw")
+        {
+            GameController.instance.ShowGameOver();
+            Destroy(gameObject);
+        }
+
     }
 
     void OnCollisionExit2D(Collision2D collision)
