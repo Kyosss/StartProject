@@ -8972,10 +8972,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slime
       objectReference: {fileID: 0}
-    - target: {fileID: 7172329455037666985, guid: 51182fe030ce4a747b8ae0f29c1b2432, type: 3}
-      propertyPath: layer.m_Bits
-      value: 1280
-      objectReference: {fileID: 0}
     - target: {fileID: 8959210024396778019, guid: 51182fe030ce4a747b8ae0f29c1b2432, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.2605088
