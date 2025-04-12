@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4821122676594687972}
   - component: {fileID: 4580305331148519984}
   - component: {fileID: 7172329455037666985}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Slime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -197,7 +197,9 @@ MonoBehaviour:
   headPoint: {fileID: 8377614112754140420}
   layer:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 1280
+  boxCollider2D: {fileID: 0}
+  circleCollider2D: {fileID: 9211447593473562595}
 --- !u!1 &3472959846970600119
 GameObject:
   m_ObjectHideFlags: 0
@@ -285,7 +287,7 @@ Transform:
   m_GameObject: {fileID: 5662072133580097260}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.15, z: 0}
+  m_LocalPosition: {x: 0, y: 0.075, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
