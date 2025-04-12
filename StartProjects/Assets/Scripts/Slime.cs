@@ -42,13 +42,16 @@ public class Slime : MonoBehaviour
         }
     }
 
+
+    bool playerDestroyed = false;
     void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.tag == "Player")
         {
             float height = col.contacts[0].point.y - headPoint.position.y;
+            Debug.Log(height);
 
-            if (height > 0f)
+            if (height > 0f && !playerDestroyed)
             {
                 col.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 10, ForceMode2D.Impulse);
                 speed = 0;
@@ -58,8 +61,13 @@ public class Slime : MonoBehaviour
                 rig.bodyType = RigidbodyType2D.Kinematic;
 
                 Destroy(gameObject, 0.05f);
-
                 
+            }
+            else
+            {
+                playerDestroyed = true;
+                GameController.instance.ShowGameOver();
+                Destroy(col.gameObject);
             }
             
         }
