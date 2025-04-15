@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
     public bool doubleJump;
     private Rigidbody2D rig;
     private Animator anim;
-    bool isBlowing;
+    public bool isBlowing;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -99,7 +99,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    void OnTriggerStay2D(Collision2D collider)
+    void OnTriggerStay2D(Collider2D collider)
     {
         if(collider.gameObject.layer == 11)
         {
@@ -107,7 +107,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    void OnTriggerExit2D(Collision2D collider)
+    void OnTriggerExit2D(Collider2D collider)
     {
         if(collider.gameObject.layer == 11)
         {
