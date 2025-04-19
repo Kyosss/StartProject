@@ -107,7 +107,7 @@ Rigidbody2D:
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 7a2b4d3eaa456754295a3b046c03238a, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -130,10 +130,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3506841ac31d10149b9be51acf5cdf89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 5
+  Speed: 3
   JumpForce: 4
   isJumping: 0
   doubleJump: 0
+  isBlowing: 0
 --- !u!95 &3862658456634769103
 Animator:
   serializedVersion: 7
@@ -190,5 +191,5 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.0011655237, y: -0.023309538}
-  m_Radius: 0.14484881
+  m_Offset: {x: 0, y: -0.035}
+  m_Radius: 0.115

@@ -29,9 +29,14 @@ public class Player : MonoBehaviour
 
     void Move()
     {
-        Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), 0f, 0f);
-        transform.position += movement * Speed * Time.deltaTime;
+        //Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), 0f, 0f);
+        //move o personagem em 1 posição
+        //transform.position += movement * Speed * Time.deltaTime;
         
+        float movement = Input.GetAxis("Horizontal");
+
+        rig.linearVelocity = new Vector2(movement * Speed, rig.linearVelocity.y);
+
         if (Input.GetAxis("Horizontal") > 0f)
         {
             anim.SetBool("walk", true);
